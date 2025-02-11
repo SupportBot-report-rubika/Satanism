@@ -1,0 +1,127 @@
+/* فایل styles.css */
+body {
+    background-color: #0d0d0d; /* پس‌زمینه تاریک */
+    color: #f2f2f2; /* متن سفید */
+    font-family: 'Creepster', cursive, sans-serif; /* فونت ترسناک */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* دکمه پیوستن به محفل شیاطین ترسناک‌تر */
+.join-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #990000; /* قرمز تیره‌تر */
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    border: 2px solid #ff3300;
+    transition: all 0.3s ease-in-out;
+}
+
+.join-button:hover {
+    background-color: #ff3300;
+    transform: scale(1.1) rotate(5deg);
+    color: #000;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 1);
+}
+
+/* هدر سایت */
+header {
+    text-align: center;
+    background-color: #660000; /* قرمز خونین */
+    padding: 30px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #ff0000; /* رنگ قرمز */
+    text-shadow: 3px 3px 20px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.6); /* افکت شعله قرمز */
+    animation: flicker 3s infinite; /* انیمیشن چشمک زن */
+}
+
+/* انیمیشن چشمک زدن */
+@keyframes flicker {
+    0% { text-shadow: 3px 3px 20px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.6); }
+    50% { text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.4), 0 0 5px rgba(255, 0, 0, 0.2); }
+    100% { text-shadow: 3px 3px 20px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 0, 0, 0.6); }
+}
+
+/* ویدیوها به صورت افقی */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.video-container video {
+    width: 32%; /* اندازه ویدیوها */
+    height: auto;
+    border: 5px solid #ff0000; /* حاشیه قرمز */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+    transition: transform 0.5s, filter 0.3s;
+}
+
+.video-container video:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2) contrast(1.1);
+}
+
+/* گالری تصاویر */
+.gallery {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #ff3300;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.7), 0 0 10px rgba(255, 0, 0, 0.7); /* افکت ترسناک */
+    animation: flicker 1s infinite; /* انیمیشن چشمک زن برای عنوان */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.image-grid img {
+    width: 100%;
+    height: 300px; /* تنظیم اندازه ثابت */
+    object-fit: cover; /* قطع تصویر به‌صورت خودکار */
+    border: 3px solid #ff3300; /* حاشیه قرمز */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    transition: transform 0.5s;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* بخش پی‌دی‌اف */
+.pdf-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222222;
+    border-radius: 10px;
+}
+
+.pdf-container object {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
